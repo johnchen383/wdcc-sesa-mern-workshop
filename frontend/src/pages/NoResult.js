@@ -9,11 +9,16 @@ function NoResult() {
     return (
       <div>
         <div className={'noPage'}>
-            <h1>No results containing all your search terms were found.</h1>
+            <h1>No results containing your search terms were found.</h1>
+
+            <a href={'/'}>
+              <img className={'speech'} src="./speechbubble.png"/>
+            </a>
             
+            <img className={'sad_cat'} src="./sad_cat.png"/>
+
+            {/* <p>CLICK TO GO BACK <a href={'/'}>here</a></p> */}
             
-            <p>CLICK TO GO BACK <a href={'/'}>here</a></p>
-            {/* <Button buttonText={"Find out the meaning of life"} clickAction={getResult} /> */}
         </div>
        
       </div>

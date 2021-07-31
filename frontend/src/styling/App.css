@@ -95,15 +95,6 @@
   left: 25vw;
 }
 
-.noPage {
-  background-color: #282c34;
-  color: #f8f9fa;
-  height: 100vh;
-}
-
-.noPage h1 {
-  margin-top: 0;
-}
 
 .noodle_form {
   position: fixed;
@@ -142,4 +133,30 @@
   border-radius: 4px;
   outline: none;
   font-size: larger;
+}
+
+
+.noPage {
+  /* background-color: #282c34; */
+  color: #f8f9fa;
+  height: 100vh;
+}
+
+.noPage h1 {
+  margin-top: 0;
+  padding-top: 200px;
+}
+
+.speech {
+  position: absolute;
+  max-width: 200px;
+  left: 350px;
+  bottom: 330px;
+}
+
+.sad_cat {
+  position: absolute;
+  max-width: 1000px;
+  left: 250px;
+  bottom: 100px;
 }
