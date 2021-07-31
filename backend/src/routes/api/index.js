@@ -34,7 +34,7 @@ router.post('/database', async function(req, res) {
         type: data.type
     });
 
-    res.sendStatus(201);
+    res.status(201).json(newContent);
 });
 
 module.exports = router;
