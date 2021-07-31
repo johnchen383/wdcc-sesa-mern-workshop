@@ -1,0 +1,14 @@
+{
+    "manifest_version": 2,
+   
+    "name": "Oodle Noodles",
+    "version": "0.1.0",
+    "description": "Extension to pro-crastinate!",
+   
+    "content_scripts": [{
+      "css": ["styles.css"],
+      "js": ["content.js"],
+      "matches": ["https://canvas.auckland.ac.nz/*"]
+    }]
+   
+  }
