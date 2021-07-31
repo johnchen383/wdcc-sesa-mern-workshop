@@ -1,7 +1,6 @@
 import express from "express"
 import CatCtrl from "./catStatus.controller.js"
 
-const express = require('express');
 
 const router = express.Router();
 
