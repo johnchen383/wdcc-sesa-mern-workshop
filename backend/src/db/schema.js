@@ -2,7 +2,8 @@ import mongoose from "mongoose"
 
 const Schema = mongoose.Schema;
 
-const schema = new Schema(
+// Content
+const schemaContent = new Schema(
     {
         id: {type: String, required: true},
         content: {type: String, required: true},
@@ -13,6 +14,18 @@ const schema = new Schema(
     }
 );
 
-const Content = mongoose.model("Content", schema);
+const Content = mongoose.model("Content", schemaContent);
 
-export {Content};
+// Status
+const schemaStatus = new Schema(
+    {
+        status: {type: Integer, required: true},
+    },
+    {
+        timestamp: {},
+    }
+);
+
+const Status = mongoose.model("Status", schemaStatus);
+
+export {Content, Status};

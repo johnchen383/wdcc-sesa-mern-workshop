@@ -1,6 +1,7 @@
 import express from "express"
 import CatCtrl from "./catStatus.controller.js"
 import { createContent, getContent } from "../../db/dao/contentDao.js";
+import { changeStatus } from "../../db/dao/statusDao.js";
 
 const router = express.Router();
 
