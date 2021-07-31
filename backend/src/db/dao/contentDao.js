@@ -6,8 +6,14 @@ async function createContent(content) {
     return dbContent;
 }
 
-async function getContent(id) {
-    return Content.findById(id);
+async function getContent(sId) {
+    let query 
+    query = { "id": { $eq: sId } }
+
+    return Content.find(query);
+
+    // findById(query);
 }
+
 
 export {createContent, getContent}
