@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import IndexPage from './pages/IndexPage';
 import AnotherPage from './pages/AnotherPage';
 import NoResult from './pages/NoResult';
+import Search from './pages/search';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
           <Route exact path={'/'} component={IndexPage} />
           <Route exact path={'/another'} component={AnotherPage} />
           <Route exact path={'/noResult'} component={NoResult} />
+          <Route exact path={'/search'} component={Search} />
 
           {/* Default path if nothing else matches */}
           <Route path={'/'} component={IndexPage} />
