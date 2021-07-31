@@ -7,9 +7,7 @@ async function createContent(content) {
 }
 
 async function getContent(id) {
-    return Content.find({
-        _id: id
-    });
+    return Content.findById(id);
 }
 
 export {createContent, getContent}

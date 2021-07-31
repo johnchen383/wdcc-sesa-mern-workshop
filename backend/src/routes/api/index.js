@@ -20,7 +20,7 @@ router.put('/status', function(req, res) {
 
 // Fetch from database
 router.get('/database/:id', async function(req, res) {
-    const id = req.params;
+    const {id} = req.params;
     const content = await getContent(id);
     res.json(content);
 });
