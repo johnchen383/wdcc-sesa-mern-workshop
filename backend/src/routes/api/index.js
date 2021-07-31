@@ -1,7 +1,7 @@
 import express from "express"
 import CatCtrl from "./catStatus.controller.js"
 import { createContent, getContent } from "../../db/dao/contentDao.js";
-import { changeStatus } from "../../db/dao/statusDao.js";
+import { getStatus, changeStatus } from "../../db/dao/statusDao.js";
 
 const router = express.Router();
 
@@ -10,13 +10,16 @@ router.get('/', function(req, res) {
 });
 
 // Get cat status 
-router.get('/status', function(req, res) {
-    res.send("Hello yozazazaz!");
+router.get('/status', async function(req, res) {
+    const status = await getStatus();
+    res.json(status);
 });
 
 // Change cat status 
-router.put('/status', function(req, res) {
-
+router.put('/status', async function(req, res) {
+    const data = req.body;
+    const newStatus = await changeStatus(data.status);
+    res.json(newStatus);
 });
 
 // Fetch from database

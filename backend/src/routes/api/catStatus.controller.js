@@ -1,6 +1,26 @@
 // import RestaurantsDAO from "../dao/restaurantsDAO.js"
+import mongodb from "mongodb"
 
+const ObjectId = mongodb.ObjectID
+
+const cluster = 'cat';
+
+let cat;
 export default class catStatusController {
+    static async injectDB(conn) {
+        if (cat) {
+          return
+        }
+        try {
+          cat = await conn.db(cluster).collection("status")
+          console.log('WOhoooooooooo')
+        } catch (e) {
+          console.error(
+            `Unable to establish a collection handle in restaurantsDAO: ${e}`,
+          )
+        }
+    }
+
   static async apiGetStatus(req, res, next) {
     const restaurantsPerPage = req.query.restaurantsPerPage ? parseInt(req.query.restaurantsPerPage, 10) : 20
     const page = req.query.page ? parseInt(req.query.page, 10) : 0

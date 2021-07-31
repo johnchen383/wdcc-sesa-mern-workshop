@@ -12,7 +12,6 @@ async function getContent(sId) {
 
     return Content.find(query);
 
-    // findById(query);
 }
 
 

@@ -1,19 +1,14 @@
 import { Status } from "../schema"
 
-async function createStatus(status) {
-    const dbStatus = new Status(status);
-    await dbStatus.save();
-    return dbStatus;
+async function changeStatus(status) {
+    await Status.updateOne({}, {status: status});
+    return getStatus(); 
 }
 
-// async function getContent(sId) {
-//     let query 
-//     query = { "id": { $eq: sId } }
-
-//     return Content.find(query);
-
-//     // findById(query);
-// }
+ async function getStatus() {
+    const status = await Status.findOne(); 
+    return status.status;
+ }
 
 
-export {createStatus}
+export {changeStatus, getStatus}

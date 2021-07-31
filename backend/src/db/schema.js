@@ -19,7 +19,7 @@ const Content = mongoose.model("Content", schemaContent);
 // Status
 const schemaStatus = new Schema(
     {
-        status: {type: Integer, required: true},
+        status: {type: Number, required: true},
     },
     {
         timestamp: {},
