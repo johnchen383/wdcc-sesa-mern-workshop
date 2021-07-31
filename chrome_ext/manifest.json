@@ -8,7 +8,7 @@
     "content_scripts": [{
       "css": ["styles.css"],
       "js": ["background.js"],
-      "matches": ["https://canvas.auckland.ac.nz/*"]
+      "matches": ["https://canvas.auckland.ac.nz/*", "https://en.wikipedia.org/*"]
     }]
    
   }
