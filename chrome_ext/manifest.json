@@ -13,7 +13,7 @@
     "content_scripts": [{
       "css": ["styles.css"],
       "js": ["jquery-3.6.0.min.js", "background.js"],
-      "matches": ["https://canvas.auckland.ac.nz/*", "https://en.wikipedia.org/*", "https://gmail.com/*"]
+      "matches": ["https://canvas.auckland.ac.nz/*", "https://en.wikipedia.org/*", "https://mail.google.com/*", "https://piazza.com/*"]
     }]
    
   }
