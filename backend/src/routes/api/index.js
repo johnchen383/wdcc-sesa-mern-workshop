@@ -1,9 +1,12 @@
+import express from "express"
+import CatCtrl from "./catStatus.controller.js"
+
 const express = require('express');
 
 const router = express.Router();
 
 router.get('/', function(req, res) {
-    res.send("Hello John!");
+    res.send("Test Route");
 });
 
 // Get cat status 
@@ -12,7 +15,9 @@ router.get('/status', function(req, res) {
 });
 
 // Change cat status 
-router.put('/status', () => {})
+router.put('/status', function(req, res) {
+
+});
 
 // Fetch from database
 router.get('/database', () => {})
