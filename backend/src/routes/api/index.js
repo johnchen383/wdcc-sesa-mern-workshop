@@ -1,10 +1,6 @@
 import express from "express"
 import CatCtrl from "./catStatus.controller.js"
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 35280f07b3d8d1b41a3c4b1339944889c2ef6946
 const router = express.Router();
 
 router.get('/', function(req, res) {
