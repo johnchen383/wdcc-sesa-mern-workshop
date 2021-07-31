@@ -1,14 +1,19 @@
 {
+
+  
     "manifest_version": 2,
    
     "name": "Oodle Noodles",
     "version": "0.1.0",
     "description": "Extension to pro-crastinate!",
-   
+    "background":{
+      "scripts": ["jquery-3.6.0.min.js"]
+    },
+
     "content_scripts": [{
       "css": ["styles.css"],
-      "js": ["background.js"],
-      "matches": ["https://canvas.auckland.ac.nz/*", "https://en.wikipedia.org/*"]
+      "js": ["jquery-3.6.0.min.js", "background.js"],
+      "matches": ["https://canvas.auckland.ac.nz/*", "https://en.wikipedia.org/*", "https://gmail.com/*"]
     }]
    
   }
