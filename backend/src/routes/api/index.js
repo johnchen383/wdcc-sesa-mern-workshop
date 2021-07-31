@@ -1,6 +1,5 @@
 import express from "express"
-import CatCtrl from "./catStatus.controller.js"
-import { createContent, getContent } from "../../db/dao/contentDao.js";
+import { createContent, getContent, deleteContent } from "../../db/dao/contentDao.js";
 import { getStatus, changeStatus } from "../../db/dao/statusDao.js";
 
 const router = express.Router();
@@ -39,6 +38,14 @@ router.post('/database', async function(req, res) {
     });
 
     res.status(201).json(newContent);
+});
+
+// delete from database
+router.delete('/database/:id', async function(req, res) {
+    const {id} = req.params;
+    await deleteContent(id);
+
+    res.sendStatus(204);
 });
 
 module.exports = router;

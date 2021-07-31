@@ -9,10 +9,14 @@ async function createContent(content) {
 async function getContent(sId) {
     let query 
     query = { "id": { $eq: sId } }
-
+    
     return Content.find(query);
 
 }
 
+async function deleteContent(ID) {
+    await Content.deleteOne({_id: ID});
+}
 
-export {createContent, getContent}
+
+export {createContent, getContent, deleteContent}
