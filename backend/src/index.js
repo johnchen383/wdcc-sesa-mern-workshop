@@ -41,3 +41,5 @@ connectToDatabase()
     .then(function() {
         app.listen(port, () => console.log(`App server listening on port ${port}!`))
     });
+
+// app.listen(port,() => console.log(`App server listening on port ${port}!`));
