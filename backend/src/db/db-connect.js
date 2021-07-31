@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const DEFAULT_CONNECTION_STRING = 'mongodb://localhost:27017/sesa-mern-workshop';
+const DEFAULT_CONNECTION_STRING = process.env.DBSTRING || 'mongodb://localhost:27017/sesa-mern-workshop';
 
 /**
  * This function begins the process of connecting to the database, and returns a promise that will
