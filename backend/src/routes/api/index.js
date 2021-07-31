@@ -1,6 +1,6 @@
 import express from "express"
 import CatCtrl from "./catStatus.controller.js"
-import { createContent } from "../../db/dao/contentDao.js";
+import { createContent, getContent } from "../../db/dao/contentDao.js";
 
 const router = express.Router();
 
@@ -19,13 +19,14 @@ router.put('/status', function(req, res) {
 });
 
 // Fetch from database
-router.get('/database', function(req, res) {
-
+router.get('/database/:id', async function(req, res) {
+    const id = req.params;
+    const content = await getContent(id);
+    res.json(content);
 });
 
 // Add to database 
 router.post('/database', async function(req, res) {
-    console.log("REACHED")
     const data = req.body;
     const newContent = await createContent({
         id: data.id,

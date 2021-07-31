@@ -6,4 +6,10 @@ async function createContent(content) {
     return dbContent;
 }
 
-export {createContent}
+async function getContent(id) {
+    return Content.find({
+        _id: id
+    });
+}
+
+export {createContent, getContent}
