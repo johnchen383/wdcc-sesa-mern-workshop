@@ -242,9 +242,9 @@ var dialog = document.querySelector("dialog");
 dialog.showModal();
 
 dialog.querySelector(".b1").addEventListener("click", function () {
-  window.location.replace("http://localhost:5500/");
+  window.location.replace("http://localhost:3000/");
 });
 
 dialog.querySelector(".b2").addEventListener("click", function () {
-  window.location.replace("http://localhost:5500/");
+  window.location.replace("http://localhost:3000/");
 });
